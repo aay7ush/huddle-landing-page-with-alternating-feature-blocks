@@ -1,0 +1,51 @@
+// Utility Classes
+
+@use "./breakpoints" as b;
+
+.container {
+  max-width: min(85vw);
+  margin-inline: auto;
+  text-align: center;
+
+  @include b.breakpoint(md) {
+    text-align: left;
+  }
+}
+
+.pink-btn {
+  background-color: var(--clr-pink-400);
+  color: var(--clr-pale-blue);
+  padding: 0.8rem 2.5rem;
+  border-radius: 30px;
+  font-weight: var(--fw-semi-bold);
+  min-width: 300px;
+  margin-inline: auto;
+  box-shadow: 0 5px 10px #cbcacad2;
+  transition: 0.3s ease;
+
+  &:hover {
+    background-color: var(--clr-pink-300);
+  }
+
+  @include b.breakpoint(md) {
+    margin-inline: 0 auto;
+  }
+}
+
+.white-btn {
+  font-weight: var(--fw-semi-bold);
+  color: var(--clr-dark-cyan);
+  background-color: #fff;
+  padding: 0.2rem 1.2rem;
+  border-radius: 30px;
+  box-shadow: 0 3px 10px #cbcacad2;
+  transition: 0.3s ease;
+
+  &:hover {
+    color: hsl(210, 8%, 67%);
+  }
+
+  @include b.breakpoint(md) {
+    padding: 0.5rem 3rem;
+  }
+}

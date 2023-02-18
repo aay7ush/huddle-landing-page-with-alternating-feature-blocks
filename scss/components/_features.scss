@@ -1,0 +1,68 @@
+@use "../utils/" as u;
+
+.features {
+  display: grid;
+  gap: 3rem;
+
+  &__box {
+    border-radius: 15px;
+    box-shadow: 0 0 7px #d4d2d2bb;
+    padding: 3.5rem 2rem 2.5rem;
+    display: grid;
+    gap: 3rem;
+
+    .features__img {
+      max-width: 280px;
+      margin-inline: auto;
+
+      @include u.breakpoint(md) {
+        max-width: 400px;
+      }
+    }
+
+    .features__content {
+      display: grid;
+      gap: 1rem;
+
+      &-title {
+        font-size: 1.5rem;
+
+        @include u.breakpoint(md) {
+          font-size: 1.7rem;
+        }
+      }
+
+      &-body {
+        color: hsl(207, 10%, 62%);
+        line-height: 1.6rem;
+        padding-inline: 1.4rem;
+
+        @include u.breakpoint(md) {
+          font-size: 1.1rem;
+          padding-inline: 0;
+        }
+      }
+
+      @include u.breakpoint(md) {
+        margin-block: auto;
+        padding-inline: 3rem;
+      }
+    }
+
+    @include u.breakpoint(md) {
+      display: flex;
+      gap: 14rem;
+
+      &:nth-child(1),
+      &:nth-child(3) {
+        .features__img {
+          order: 1;
+        }
+      }
+    }
+  }
+
+  @include u.breakpoint(md) {
+    margin-top: 7rem;
+  }
+}

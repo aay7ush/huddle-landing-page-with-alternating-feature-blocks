@@ -1,0 +1,96 @@
+@use "../utils/" as u;
+
+.footer {
+  background-color: var(--clr-dark-cyan);
+  color: var(--clr-pale-blue);
+  padding: 10rem 1.5rem 3rem;
+
+  &__content {
+    display: grid;
+    gap: 1.5rem;
+
+    .logo {
+      max-width: 150px;
+    }
+
+    .contact {
+      display: flex;
+      gap: 1.3rem;
+      align-items: center;
+    }
+  }
+
+  &__nav {
+    &-items {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      margin-block: 3rem;
+
+      li {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+
+        a:any-link {
+          color: var(--clr-pale-blue);
+          transition: 0.3 ease;
+
+          &:hover {
+            text-decoration: underline;
+            text-underline-offset: 0.3rem;
+          }
+        }
+      }
+
+      @include u.breakpoint(md) {
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-block: 2rem auto;
+      }
+    }
+  }
+
+  &__socials {
+    display: flex;
+    place-content: center;
+    gap: 1rem;
+
+    i {
+      border: 1px solid var(--clr-pale-blue);
+      padding: 0.5rem;
+      border-radius: 50%;
+      transition: 0.3s ease;
+
+      &:hover {
+        cursor: pointer;
+        color: var(--clr-pink-400);
+        border-color: var(--clr-pink-400);
+      }
+    }
+
+    @include u.breakpoint(md) {
+      margin-block: 2rem auto;
+    }
+  }
+
+  &__text {
+    font-size: 0.8rem;
+    text-align: center;
+    margin-top: 1.5rem;
+
+    @include u.breakpoint(md) {
+      position: absolute;
+      right: 3vw;
+      bottom: 2vw;
+    }
+  }
+
+  @include u.breakpoint(md) {
+    display: grid;
+    font-size: 1rem;
+    grid-template-columns: 1.2fr 2fr 1fr;
+    position: relative;
+    padding-inline: 5rem;
+  }
+}

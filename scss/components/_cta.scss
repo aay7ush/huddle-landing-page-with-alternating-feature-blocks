@@ -1,0 +1,24 @@
+@use "../utils/" as u;
+
+.cta {
+  font-size: 0.9rem;
+  border-radius: 15px;
+  box-shadow: 0 0 7px #d4d2d2bb;
+  padding-block: 3rem;
+  display: grid;
+  gap: 1.7rem;
+  background-color: #fff;
+  margin-block: 7rem -5rem;
+  position: relative;
+  z-index: 1;
+
+  @include u.breakpoint(md) {
+    max-width: 700px;
+    justify-items: center;
+
+    button {
+      margin-inline: auto;
+      padding: 1.3rem;
+    }
+  }
+}

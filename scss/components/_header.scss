@@ -1,0 +1,76 @@
+@use "../utils/" as u;
+
+.header {
+  background-image: url(../../images/bg-hero-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: hsl(191, 55%, 94%);
+  margin-bottom: 3rem;
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 1.5rem 5.5rem;
+
+    .logo {
+      max-width: 120px;
+
+      @include u.breakpoint(md) {
+        max-width: 150px;
+      }
+    }
+  }
+
+  &__content {
+    display: grid;
+    gap: 1.5rem;
+
+    .left {
+      display: grid;
+      gap: 1.5rem;
+
+      .title {
+        @include u.breakpoint(md) {
+          font-size: 2.7rem;
+        }
+      }
+
+      .body {
+        line-height: 1.7rem;
+        padding-inline: 1.5rem;
+
+        @include u.breakpoint(md) {
+          font-size: 1.135rem;
+          padding-inline: 0;
+        }
+      }
+
+      @include u.breakpoint(md) {
+        margin-block: auto;
+        padding-right: 3rem;
+      }
+    }
+
+    .right {
+      .img {
+        max-width: 400px;
+        margin-inline: auto;
+        padding-block: 3rem;
+
+        @include u.breakpoint(md) {
+          max-width: 700px;
+        }
+      }
+    }
+
+    @include u.breakpoint(md) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @include u.breakpoint(md) {
+    background-image: url(../../images/bg-hero-desktop.svg);
+  }
+}
