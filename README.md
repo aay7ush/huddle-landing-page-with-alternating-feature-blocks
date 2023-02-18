@@ -8,7 +8,7 @@ Building realistic projects to improve my front-end skills.
 
 ### Links
 
-- Live Site URL: [Huddle landing page with alternating feature blocks](https://huddle-land1ng-page.netlify.app/)
+- Live Site URL: [Huddle landing page with alternating feature blocks](https://huddle-landing-p4ge.netlify.app/)
 
 ## Built with
 
